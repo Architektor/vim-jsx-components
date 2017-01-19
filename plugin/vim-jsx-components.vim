@@ -1,3 +1,5 @@
+let s:current_file = expand('<sfile>:p:h')
+
 function! GetCurrentContent(file)
   let l:content = getline(0,line("$"))
   let l:result = 0
@@ -24,13 +26,13 @@ function! InitJSX(file)
   let componentname = input('Component name (leave empty for ' . filename . ' ): ')
   call inputrestore()
   if choice ==? 1
-    let component = expand("<sfile>:p:h") . "/../components/ReactFunctionalComponent.jsx"
+    let component = s:current_file . "/../components/ReactFunctionalComponent.jsx"
   elseif choice ==? 2
-    let component = expand("<sfile>:p:h") . "/../components/ReactFunctionalConnectedComponent.jsx"
+    let component = s:current_file . "/../components/ReactFunctionalConnectedComponent.jsx"
   elseif choice ==? 3
-    let component = expand("<sfile>:p:h") . "/../components/ReactStatefulComponent.jsx"
+    let component = s:current_file . "/../components/ReactStatefulComponent.jsx"
   elseif choice ==? 4
-    let component = expand("<sfile>:p:h") . "/../components/ReactStatefulConnectedComponent.jsx"
+    let component = s:current_file . "/../components/ReactStatefulConnectedComponent.jsx"
   endif
   :execute ":r" . component
   :normal! kdd
