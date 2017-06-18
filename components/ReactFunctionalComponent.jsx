@@ -1,8 +1,10 @@
 import React, { PropTypes } from 'react';
 
-const TemplateComponent = ({}) =>
+const TemplateComponent = () => (
   <div>
-  </div>;
+    TemplateComponent
+  </div>
+);
 
 TemplateComponent.propTypes = {
 

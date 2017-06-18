@@ -10,6 +10,7 @@ class TemplateComponent extends Component {
   render() {
     return (
       <div>
+        TemplateComponent
       </div>
     );
   }
