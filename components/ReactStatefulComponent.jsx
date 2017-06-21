@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class TemplateComponent extends Component {
   static propTypes = {
@@ -8,6 +9,7 @@ class TemplateComponent extends Component {
   render() {
     return (
       <div>
+        TemplateComponent
       </div>
     );
   }

@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -10,12 +11,13 @@ class TemplateComponent extends Component {
   render() {
     return (
       <div>
+        TemplateComponent
       </div>
     );
   }
 }
 
-function mapStateToProps({}) {
+function mapStateToProps() {
   return {
   };
 }
